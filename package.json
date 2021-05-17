@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r esm index.js"
   },
   "author": "kalhin",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
     "express": "^4.17.1"
   }
 }

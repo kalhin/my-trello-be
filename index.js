@@ -1,6 +1,14 @@
-var express = require('express');
-var app = express();
+import express from "express";
+import cors from "cors";
+import { toDos } from "./data";
 
-app.get('/', function(req, res) {
-    res.send('Hello worls')
-})
+const app = express();
+const port = 5000;
+
+app.use(cors());
+
+app.get('/todos', (req, res) => {
+  res.json(toDos)
+});
+
+app.listen(port);
